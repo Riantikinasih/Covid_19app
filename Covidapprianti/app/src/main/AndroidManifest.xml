@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.web.rkinasih.covidapp_rianti">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:allowBackup="true"
+
+        android:label="COVID 19"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.WorldHistory" />
+        <activity android:name=".activity.NewsDetail" />
+        <activity android:name=".activity.IndonesiaProvinceActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".receiver.DailyReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="TODO" />
+
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.InfoActivity" />
+        <activity android:name=".activity.MainActivity" />
+    </application>
+
+</manifest>
